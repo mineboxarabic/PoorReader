@@ -17,18 +17,6 @@ app.get('/testPdfjs',(req,res)=>{
   res.sendFile(pdfPath);
 
 });
-app.get('/testPdf2html',(req,res)=>{
-  let pdfPath = path.join(__dirname , '/server/Pdfs/test.pdf');
-  res.sendFile
-  pdf2html.html(pdfPath, function(err, html) {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    res.send(html);
-  });
-}
-);
 app.get('/getPdf', (req, res) => {
   let pdfPath = path.join(__dirname , '/server/Pdfs/test.pdf');
   let outputPath = path.join(__dirname , '/server/IMGs/');
